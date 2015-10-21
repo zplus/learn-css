@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>flex</title>
+	<style type="text/css">
+		html { height: 100%; }
+		body { background: #fff; margin: 0; width: 100%; height: 100%; }
+		/* 水平伸缩容器 */
+		.row-flex {
+			-moz-box-orient: horizontal;
+			-webkit-box-orient: horizontal;
+			
+			-moz-box-direction: normal;
+			-webkit-box-direction: normal;
+
+			-moz-box-lines: multiple;
+			-webkit-box-lines: multiple;
+
+			-ms-flex-flow: row wrap;
+			-webkit-flex-flow: row wrap;
+			flex-flow: row wrap;
+		}
+		/* 垂直伸缩容器 */
+		.col-flex {
+			-moz-box-orient: vertical;
+			-webkit-box-orient: vertical;
+			
+			-moz-box-direction: normal;
+			-webkit-box-direction: normal;
+
+			-moz-box-lines: multiple;
+			-webkit-box-lines: multiple;
+
+			-ms-flex-flow: column wrap;
+			-webkit-flex-flow: column wrap;
+			flex-flow: column wrap;
+		}
+		/* 伸缩容器 */
+		.flex-wrap {
+			/* 各种版本兼容 */
+			display: -webkit-box;
+			display: -moz-box;
+			display: -ms-flexbox;
+			display: -webkit-flex;
+			display: flex;
+		}
+
+		/* 垂直居中 */
+		.midCenter {
+			/* 垂直居中核心 */
+			-moz-box-pack: center;
+			-webkit-box-pack: center;
+			box-pack: center;
+
+			-moz-box-align: center;
+			-webkit-box-align: center;
+			box-align: center;
+
+			-ms-flex-pack: center;
+			display: -ms-flexbox;
+			-ms-flex-align: center;
+			justify-content: center;
+			align-items: center;
+		}
+
+		/* 占位器 */
+		.page {
+			-webkit-box-flex: 1;
+			-moz-box-flex: 1;
+			-ms-flex: 1;
+			-webkit-flex: 1;
+			flex: 1;
+			overflow: hidden;
+		}
+
+		/* 真正滚动 */
+		.scroll-wrap {
+			position: relative;
+			width: 100%;
+			height: 100%;
+			overflow: scroll;
+			-webkit-box-flex: 1;
+			-moz-box-flex: 1;
+			-webkit-flex: 1;
+			-ms-flex: 1;
+			flex: 1;
+		}
+
+		/* header&footer */
+		header,footer {
+			background: #f7f7f7;
+			height: 44px;
+		}
+
+		footer > div {
+			-webkit-box-flex: 1;
+			-moz-box-flex: 1;
+			-webkit-flex: 1;
+			-ms-flex: 1;
+			flex: 1;
+			border: 1px solid #666;
+			margin: 4px;
+		}
+
+		section {
+			margin: 3px 5px;
+		}
+
+		/* 真正设置高度 */
+		#banner {
+			border: 2px solid #999;
+			margin: 1px;
+			height: 100px;
+		}
+		#quirk, #four-col {
+			height: 150px;
+		}
+		#three-col, #two-col {
+			height: 100px;
+		}
+
+		/* */
+
+	</style>
+</head>
+<body class="flex-wrap col-flex">
+
+
+
+</body>
+</html>
