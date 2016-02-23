@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <!--[if IE 6]>
+
+    <![endif]-->
+
+    <!--[if !IE]><!-->
+
+    <!--<![endif]-->
+    <!--[if gte IE 6]>
+
+    <![endif]-->
+</head>
+<body>
+<h1>外边距叠加的问题</h1>
+<em>具有块级子元素计算其高度的方式造成的</em>
+<style type="text/css">
+    #box {
+        margin: 10px;
+        border: 1px solid #000; /*way1:加边框*/
+        padding: 1px; /*way1:加内边距*/
+        background-color: #d5d5d5;
+    }
+    p {
+        margin: 20px;
+        background-color: #69f;
+    }
+</style>
+<div id="box">
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias, animi assumenda in inventore iste iusto libero numquam omnis suscipit velit. Beatae deleniti est itaque nulla, omnis quibusdam quod soluta. Rem!</p>
+</div>
+</body>
+</html>

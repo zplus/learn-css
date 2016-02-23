@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>3col</title>
+    <style type="text/css">
+        body {
+            text-align: center;
+        }
+        .wrapper {
+            width: 920px;
+            margin: 0 auto;
+            text-align: left;
+        }
+        .header,
+        .footer {
+            height: 100px;
+            background: #eee;
+        }
+        .content {
+            overflow: hidden;
+        }
+        .content .primary {
+            width: 670px;
+            float: right;
+            display: inline;
+        }
+        .content .secondary {
+            height: 500px;
+            background: #d4dde6;
+
+            width: 230px;
+            float: left;
+            display: inline;
+        }
+        .content .primary .primary {
+            height: 500px;
+            background: #609ae4;
+
+            width: 400px;
+            float: left;
+            display: inline;
+        }
+        .content .primary .secondary {
+            height: 500px;
+            background: #47c9af;
+
+            width: 230px;
+            padding-right: 20px;
+            float: right;
+            display: inline;
+        }
+    </style>
+</head>
+<body>
+<div class="wrapper">
+    <div class="header"></div>
+    <div class="content">
+        <div class="primary">
+            <div class="primary"></div>
+            <div class="secondary"></div>
+        </div>
+        <div class="secondary"></div>
+    </div>
+    <div class="footer"></div>
+</div>
+</body>
+</html>
