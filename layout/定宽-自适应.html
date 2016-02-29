@@ -17,6 +17,11 @@
             float: left;
             width: 100px;
         }
+        .right-fix {
+            float: right;
+            width: 100%;
+            margin-left: -100px;
+        }
         .right {
             margin-left: 100px;
         }
@@ -27,10 +32,14 @@
     <div class="left">
         <p>left</p>
     </div>
-    <div class="right">
-        <p>right</p>
-        <p>right</p>
+    <!-- 外层在包裹一个容器 -->
+    <div class="right-fix">
+        <div class="right">
+            <p>right</p>
+            <p>right</p>
+        </div>
     </div>
 </div>
+<a href="https://segmentfault.com/a/1190000004500652">参考网址:多列布局方案整理</a>
 </body>
 </html>
