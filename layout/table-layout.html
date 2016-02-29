@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>table-layout</title>
+</head>
+<body>
+<h1>宽度设定为百分比</h1>
+<h2>算法分类</h2>
+<table style="width:200px; table-layout:fixed; background:darkkhaki;" cellpadding="0" cellspacing="0">
+    <tr>
+        <td style="width:10%; background:plum;"> <!--  【TD1】  -->
+            <div style="background:pink;">AAA</div>
+        </td>
+        <td style="width:30%; background:dodgerblue; padding-left:50px;"> <!--  【TD2】  -->
+            <div style="background:lightblue;">BBB</div>
+        </td>
+        <td style="width:60%; background:crimson;"> <!--  【TD3】  -->
+            <div style="background:gold;">CCC</div>
+        </td>
+    </tr>
+</table>
+在 Firefox 中，三个TD元素的实际宽度变为：15px、95px、90px，它们的宽度计算遵循如下算法：
+列的可用内容宽度之和 = 表格的可用宽度 - 列的左右边白之和 - 列的左右边框之和 - 单元格间距之和
+列的实际宽度 = 列的可用内容宽度之和 * 列的百分比宽度 + 列的 padding
+所以列的可用宽度之和 = 200px - 50px = 150px，则【TD1】宽度为10% * 150px = 15px，【TD2】实际宽度为30% * 150px + 50px = 95px，【TD3】宽度为60% * 150px = 90px。
+
+<a href="http://w3help.org/zh-cn/causes/RE8001">参考网址:固定表格布局下的各浏览器对与表格宽度计算算法不同</a>
+</body>
+</html>
