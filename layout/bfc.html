@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>BFC</title>
+</head>
+<body>
+<!-- ----------------------- demo2 /S ------------------------------------------------ -->
+<style type="text/css">
+    .left {
+        background: pink;
+        float: left;
+        width: 180px;
+    }
+    .center {
+        background: lightyellow;
+        overflow: hidden;
+    }
+    .right {
+        background: lightblue;
+        width: 180px;
+        float: right;
+    }
+</style>
+<div class="container">
+    <div class="left">
+      <pre>
+  .left{
+    background:pink;
+    float: left;
+    width:180px;
+  }
+      </pre>
+    </div>
+    <div class="right">
+       <pre>
+  .right{
+    background:lightblue;
+    width:180px;
+    float:right;
+  }
+      </pre>
+    </div>
+    <div class="center">
+    <pre>
+  .center{
+    background:lightyellow;
+    overflow:hidden;
+    height:116px;
+  }
+      </pre>
+    </div>
+</div>
+<!-- ----------------------- demo2 /E ------------------------------------------------ -->
+
+<!-- ----------------------- demo1 /S ------------------------------------------------ -->
+<h3>在嵌套元素中,阻止两个相邻元素的margin重叠起</h3>
+<b> 此时 div 与 ul 之间的垂直距离,取 div,ul,li 三者之间的最大margin</b>
+<em>要阻止嵌套元素的重叠,只需让 ul 生成 BFC,这样 div,ul,li 之间不会发生重叠现象</em>
+<dl>
+    <dd> 块级格式化上下文 会阻止外边距叠加</dd>
+    <dd> 块级格式化上下文 不会重叠浮动元素</dd>
+    <dd> 块级格式化上下文 可以包含浮动</dd>
+</dl>
+<style type="text/css">
+    html, body { height: 100%; width: 100%; margin: 0; padding: 0; }
+    * { margin: 0; padding: 0; }
+    .first {
+        margin: 20px;
+        background: lightgreen;
+        width: 100px;
+        height: 100px;
+    }
+    ul {
+        /*生成 BFC*/
+        /*position: absolute;*/
+        /*float: left;*/
+        /*overflow: hidden;*/ /*还是会重叠*/
+        /*display:inline-block;*/
+        margin: 10px;
+        background: lightblue;
+        list-style: none;
+    }
+    li {
+        border: 1px solid #000;
+        margin: 50px;
+    }
+</style>
+<div class="first"></div>
+<ul>
+    <li>1</li>
+    <li>2</li>
+    <li>3</li>
+</ul>
+<!-- ----------------------- demo1 /E ------------------------------------------------ -->
+<a href="http://www.cnblogs.com/dojo-lzz/p/3999013.html">参考网址</a>
+</body>
+</html>
