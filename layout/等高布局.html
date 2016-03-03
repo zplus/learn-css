@@ -2,23 +2,30 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>等高布局</title>
     <style type="text/css">
-        .wrapper {
-            width: 100%;
-            overflow: hidden;
-        }
-        .box {
-            width: 250px;
-            margin: 0 0 -500px 20px;
-            float: left;
-            display: inline;
-            padding: 20px 20px 520px 20px;
-            background: #89ac10;
-        }
+        * { margin: 0; padding: 0; }
     </style>
 </head>
 <body>
+<h3>1. table</h3>
+<h3>2. flex</h3>
+<h3>3. float</h3>
+
+<style type="text/css">
+    .wrapper {
+        width: 100%;
+        overflow: hidden;
+    }
+    .box {
+        width: 250px;
+        margin: 0 0 -500px 20px;
+        float: left;
+        display: inline;
+        padding: 20px 20px 520px 20px;
+        background: #89ac10;
+    }
+</style>
 <div class="wrapper">
     <div class="box">
         <h1>Andy Budd</h1>
@@ -32,5 +39,6 @@
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A blanditiis consectetur distinctio doloribus eum facere facilis fugit harum illo illum ipsam itaque </p>
     </div>
 </div>
+<a href="https://segmentfault.com/a/1190000004500652">参考网址:多列布局方案整理</a>
 </body>
 </html>

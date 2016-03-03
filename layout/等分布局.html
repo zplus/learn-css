@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>等分布局</title>
+    <style type="text/css">
+        * { margin: 0; padding: 0; }
+        .parent { background-color: #ddd; }
+        .column p { margin-left: 20px; background-color: #6d8ab7; }
+    </style>
+</head>
+<body>
+<!-- ----------------------- demo3 /S ------------------------------------------------ -->
+<h3>方法3: flex</h3>
+<style type="text/css">
+    .demo3 .parent {
+        display: flex;
+    }
+    .demo3 .column {
+        flex: 1;
+    }
+    .demo3 .column + .demo3 .column {
+        margin-left: 20px;
+    }
+</style>
+<div class="demo3">
+    <div class="parent">
+        <div class="column"><p>1</p></div>
+        <div class="column"><p>2</p></div>
+        <div class="column"><p>3</p></div>
+        <div class="column"><p>4</p></div>
+    </div>
+</div>
+<!-- ----------------------- demo3 /E ------------------------------------------------ -->
+<!-- ----------------------- demo2 /S ------------------------------------------------ -->
+<h3>方法2: table</h3>
+<style type="text/css">
+    .demo2 .parent-fix{
+        margin-left: -20px; /*为父元素增加20px宽度*/ }
+    .demo2 .parent{
+        display : table;
+        width : 100%;
+        table-layout : fixed;
+    }
+    .demo2 .column{
+        display: table-cell;
+    }
+</style>
+<div class="demo2">
+    <div class="parent">
+        <div class="column"><p>1</p></div>
+        <div class="column"><p>2</p></div>
+        <div class="column"><p>3</p></div>
+        <div class="column"><p>4</p></div>
+    </div>
+</div>
+<!-- ----------------------- demo2 /E ------------------------------------------------ -->
+<!-- ----------------------- demo1 /S ------------------------------------------------ -->
+<h3>方法1: float</h3>
+<style type="text/css">
+    .demo1 .parent {
+        margin-left: -20px; /*为父元素增加20px宽度*/
+        overflow: hidden;
+    }
+    .demo1 .column {
+        float: left;
+        width: 25%;
+    }
+</style>
+<div class="demo1">
+    <div class="parent">
+        <div class="column"><p>1</p></div>
+        <div class="column"><p>2</p></div>
+        <div class="column"><p>3</p></div>
+        <div class="column"><p>4</p></div>
+    </div>
+</div>
+<!-- ----------------------- demo1 /E ------------------------------------------------ -->
+
+</body>
+</html>
