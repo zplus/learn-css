@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>3栏布局</title>
+    <style type="text/css">
+        * { margin: 0; padding: 0; }
+        body { font: 1em helvetica, arial, sans-serif; }
+        #main_wrapper {
+            min-width: 600px;
+            max-width: 1100px;
+            margin: 0 auto;
+            background: #eee;
+        }
+        .header {
+            padding: 5px 10px;
+            background: #3f7ccf;
+        }
+        #threecolwrap {
+            float: left;
+            width: 100%;
+            background: #ddd;
+        }
+        #twocolwrap {
+            float: left;
+            width: 100%;
+            margin-right: -210px;
+        }
+        .nav {
+            float: left;
+            width: 150px;
+            background: #f00;
+            padding: 20px 0;
+        }
+        .nav > * { margin: 0 10px; }
+        .article {
+            width: auto;
+            margin-left: 150px;
+            margin-right: 210px;
+            background: #eee;
+            padding: 20px 0;
+        }
+        .article > * { margin: 0 20px; }
+        .aside {
+            float: left;
+            width: 210px;
+            background: #ffed53;
+            padding: 20px 0;
+        }
+        .aside > * { margin: 0 10px; }
+        .footer {
+            clear: both; width: 100%; text-align: center; background: #000;
+        }
+    </style>
+</head>
+<body>
+<div id="main_wrapper">
+    <div class="header">
+        header
+    </div>
+    <div id="threecolwrap"><!-- 三栏外包装 -->
+        <div id="twocolwrap"><!-- 两栏外包装(包围左栏和中栏) -->
+            <!-- 左栏 -->
+            <div class="nav">
+                <!-- 导航 -->
+                nav<br>
+                nav<br>
+            </div>
+            <!-- 中栏 -->
+            <div class="article">
+                article
+            </div>
+        </div><!-- /E twocolwrap -->
+        <!--  右栏 -->
+        <div class="aside">
+            <!-- 侧栏 -->
+            aside
+        </div>
+    </div><!-- /E threecolwrap -->
+    <div class="footer">
+        <!--  页脚 -->
+        footer
+    </div>
+</div>
+</body>
+</html>

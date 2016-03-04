@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>横向导航</title>
+    <style type="text/css">
+        .nav ul { overflow: hidden; }
+        .nav li {
+            float: left;
+            list-style-type: none;
+        }
+        .nav a {
+            display: block;
+            padding: 0 16px;
+            text-decoration: none;
+            color: #999;
+        }
+        .nav li + li a {
+            border-left: 1px solid #aaa;
+        }
+        .nav a:hover {
+            color: #555;
+        }
+    </style>
+</head>
+<body>
+<div class="nav">
+    <ul>
+        <li><a href="#">Shirts</a></li>
+        <li><a href="#">Pants</a></li>
+        <li><a href="#">Dresses</a></li>
+        <li><a href="#">Shoes</a></li>
+        <li><a href="#">Accessories</a></li>
+    </ul>
+</div>
+</body>
+</html>

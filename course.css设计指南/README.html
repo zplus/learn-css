@@ -1,0 +1,42 @@
+<h1 id="2-css-">2.CSS工作原理</h1>
+<blockquote>
+<p> IE7,8支持</p>
+<p><code>div:hover</code> ie7下二级菜单，会失去焦点</p>
+<p><code>&gt;</code></p>
+</blockquote>
+<h3 id="2-3-4-">2.3.4 通用选择符*</h3>
+<pre><code class="lang-css">/*只有 section的孙子元素Link2生效(IE78无效)*/
+section * a { font-size: 30px; }
+</code></pre>
+<h3 id="2-6-1-ui-">2.6.1 UI伪类</h3>
+<ol>
+<li>链接伪类 LoVe？HA!</li>
+<li>:focus 伪类</li>
+<li>:target 伪类<code>IE7,8不支持</code></li>
+</ol>
+<h3 id="2-6-2-">2.6.2 结构化伪类</h3>
+<ol>
+<li>:first-child 和 :last-child</li>
+<li>:nth-child(n) 也可以 odd 或 even <code>IE7,8不支持</code></li>
+</ol>
+<h2 id="2-7-">2.7 伪元素</h2>
+<ol>
+<li>:first-letter 伪元素</li>
+<li>:first-line 伪元素</li>
+<li>:before 和 :after 伪元素<code>IE7不支持</code></li>
+</ol>
+<h3 id="2-9-2-">2.9.2 层叠规则</h3>
+<p>规则</p>
+<ol>
+<li>找到应用给每个元素和属性的所有声明</li>
+<li>按照顺序和权重排序</li>
+<li>按特指度排序</li>
+<li>顺序决定权重</li>
+</ol>
+<h3 id="2-9-3-">2.9.3 计算特指度</h3>
+<p><code>I-C-E</code></p>
+<ol>
+<li>选择符中有一个 ID,就在<code>I</code> 的位置上加1</li>
+<li>选择符中有一个类(、伪类、属性选择器)，就在<code>C</code>的位置加1</li>
+<li>选择符中一个标签名(、伪元素选择器)，就在<code>E</code>的位置加1</li>
+</ol>

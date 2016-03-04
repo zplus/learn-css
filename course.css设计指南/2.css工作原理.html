@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>css工作原理</title>
+</head>
+<body>
+<!-- 选择符 -->
+<style type="text/css">
+    /*~ 只有Link3有效*/
+    h2 ~ a { color: red; }
+    /*只有 section的孙子元素Link2生效(IE78无效)*/
+    section * a { font-size: 30px; }
+</style>
+<section>
+    <a href="#">Link1</a>
+    <h2>An H2 Heading</h2>
+    <p>This is paragraph 1</p>
+    <p>Paragraph 2 has <a href="#">Link2</a> in it.</p>
+    <a href="#">Link3</a>
+</section>
+<!-- UI伪类 -->
+<style type="text/css">
+    /*IE7,8无效*/
+    #more_info:target { background: #eee; }
+</style>
+<a href="#more_info">More Information</a>
+<h2 id="more_info">This is the information you are looking for.</h2>
+<!-- 结构化伪类 -->
+<style type="text/css">
+    ol.results li:first-child {
+        color: blue;
+    }
+    ol.results li:nth-child(3) {
+        color: red;
+    }
+</style>
+<ol class="results">
+    <li>My Fast Pony</li>
+    <li>Steady Trotter</li>
+    <li>Slow Ol' Nag</li>
+</ol>
+<h2>2.7伪元素</h2>
+<pre>1. :first-letter 伪元素
+    2. :first-line 伪元素
+    3. :before 和 :after 伪元素
+</pre>
+<style type="text/css">
+    .first-letter:first-letter {
+        text-transform: uppercase;
+        color: red;
+    }
+    .first-letter:first-line {
+        font-size: 20px;
+    }
+    .first-letter:before {
+        content: "before:";
+    }
+</style>
+<p class="first-letter">lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias fugiat ipsa magni repudiandae temporibus vero? Autem dolorem earum error est, ex neque odit, quas repellat sit sunt suscipit totam unde.</p>
+</body>
+</html>
