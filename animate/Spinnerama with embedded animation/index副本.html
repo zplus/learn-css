@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <style>
+        html, body {
+  height: 100%;
+  text-align: center;
+  background: #333;
+}
+
+svg {
+  width: 160px;
+  height: 160px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -80px;
+  margin-left: -80px;
+}
+
+    </style>
+</head>
+
+<body>
+<svg viewBox="-10 -10 220 220">
+      <g fill="none" stroke-width="6" transform="translate(100,100)">
+          <path d="M 0,-100 A 100,100 0 0,1 86.6,-50" stroke="url(#cl1)" stroke-dasharray="200 200" />
+      </g>
+  <defs>
+    <style type="text/css">
+      g {
+        /*-webkit-transform: translate(8px, 8px) rotate(0deg);*/
+      }
+      path {
+        fill: none;
+        stroke-linecap: round;
+        stroke-width: 14;
+        stroke-dashoffset: 200;
+        -webkit-animation: circle 3s infinite ease-in-out;
+      }
+      @-webkit-keyframes circle {
+        to {
+          stroke-dashoffset: -200;
+        }
+      }
+    </style>
+  </defs>
+</svg>
+ <!--  Defining Angle Gradient Colors  -->
+    <svg width="0" height="0">
+        <defs>
+            <linearGradient id="cl1" gradientUnits="objectBoundingBox" x1="0" y1="0" x2="1" y2="1">
+                <stop stop-color="#618099" />
+                <stop offset="100%" stop-color="#8e6677" />
+            </linearGradient>
+            <linearGradient id="cl2" gradientUnits="objectBoundingBox" x1="0" y1="0" x2="0" y2="1">
+                <stop stop-color="#8e6677" />
+                <stop offset="100%" stop-color="#9b5e67" />
+            </linearGradient>
+            <linearGradient id="cl3" gradientUnits="objectBoundingBox" x1="1" y1="0" x2="0" y2="1">
+                <stop stop-color="#9b5e67" />
+                <stop offset="100%" stop-color="#9c787a" />
+            </linearGradient>
+            <linearGradient id="cl4" gradientUnits="objectBoundingBox" x1="1" y1="1" x2="0" y2="0">
+                <stop stop-color="#9c787a" />
+                <stop offset="100%" stop-color="#817a94" />
+            </linearGradient>
+            <linearGradient id="cl5" gradientUnits="objectBoundingBox" x1="0" y1="1" x2="0" y2="0">
+                <stop stop-color="#817a94" />
+                <stop offset="100%" stop-color="#498a98" />
+            </linearGradient>
+            <linearGradient id="cl6" gradientUnits="objectBoundingBox" x1="0" y1="1" x2="1" y2="0">
+                <stop stop-color="#498a98" />
+                <stop offset="100%" stop-color="#618099" />
+            </linearGradient>
+        </defs>
+    </svg>
+</body>
+
+</html>
