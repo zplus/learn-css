@@ -1,0 +1,325 @@
+// flex-direction
+// flex-wrap
+// flex-flow
+// justify-content 项目在主轴上的对齐方式
+// align-items 定义项目在交叉轴上如何对齐
+// align-content 属性定义了多根轴线的对齐方式
+
+// 作用在项目上
+// order 定义项目的排列顺序。数值越小，排列越靠前，默认为0。
+// flex-grow 属性定义项目的放大比例，默认为0，即如果存在剩余空间，也不放大
+// flex-shrink 缩小比例
+// flex-basis 定义了在分配多余空间之前，项目占据的主轴空间（main size）
+// flex 是flex-grow, flex-shrink 和 flex-basis的简写，默认值为0 1 auto。后两个属性可选。
+// align-self
+
+// flex 测试
+.container {
+	border: 1px solid #000;
+	display: flex;
+	height: 200px;
+	flex-direction: row;
+	flex-wrap: wrap;
+	flex-flow: row nowrap;
+	// justify-content: flex-start;
+	// justify-content: flex-end;
+	// justify-content: center;
+	// justify-content: space-between;
+	justify-content: space-around;
+	// align-items: flex-start;
+	// align-items: flex-end;
+	// align-items: center;
+	// align-items: stretch;
+	// align-items: baseline;
+	.item {
+		flex: none;
+		width: 25%;
+		height: 50px;
+		background: #eee;
+		margin: 10px;
+		&:nth-of-type(1) {
+			order: 4;
+			height: 70px;
+		}
+		&:nth-of-type(2) {
+			height: 80px;
+			flex-basis: 150px;
+			flex-shrink: 0;
+			align-self: flex-end;
+		}
+		&:nth-of-type(3) {
+			order: 1;
+			flex-shrink: 1;
+		}
+		&:nth-of-type(4) {
+			flex-grow: 2;
+		}
+	}
+}
+.initial {
+	flex: initial;
+	width: 100px;
+	min-width: 50px;
+	background: red;
+}
+.none {
+	flex: none;
+	width: 100px;
+	background: green;
+}
+.flex1 {
+	flex: 1;
+	background: blue;
+	flex: auto;
+}
+.flex2 {
+	flex: 2;
+	background: cyan;
+}
+
+// 居中布局
+.vertical-container {
+	height: 300px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border: 1px solid red;
+	div {
+		width: 100px;
+		height: 200px;
+		border: 1px solid #000;
+	}
+}
+.setpperInput {
+	display: flex
+}
+.setpperInput_input {
+	border-left: 0;
+	border-right: 0;
+	width: 60px;
+	text-align: center;
+}
+.button {
+	cursor: pointer;
+	padding: 5px 15px;
+	color: #fff;
+	background-color: #4ebbe4;
+	font-size: 12px;
+	border: 1px solid #16a2d7;
+	border-radius: 4px;
+	&-addOnLeft {
+border-top-right-radius: 0;
+border-bottom-right-radius: 0;
+	}
+	&-addOnRight {
+		border-top-left-radius: 0;
+		border-bottom-left-radius: 0;
+	}
+}
+.input {
+	border: 1px solid #d7dbdd;
+  padding: 0 10px;
+	border-radius: 0;
+	box-shadow: none;
+}
+// tabs
+.tabs {
+	display: flex;
+	border-bottom: 1px solid #d7dbdd;
+	.tab {
+		cursor: pointer;
+		padding: 5px 30px;
+		color: #16a2d7;
+		font-size: 12px;
+		border-bottom: 2px solid transparent;
+		&.active {
+			border-bottom-color: #4ebbe4;
+		}
+	}
+}
+
+.siteHeader {
+	display: flex;
+	justify-content: space-between;
+	padding: 10px;
+	background-color: #56727c;
+	&-section {
+		display: flex;
+		align-items: center;
+	}
+	&-item {
+		padding: 5px 15px;
+		font-size: 12px;
+		&.active {
+			color: #fff;
+			background-color: #415f69;
+			border-radius: 4px;
+		}
+	}
+	&-item + &-item {
+		margin-left: 5px;
+	}
+}
+.siteHeaderLogo {
+	font-size: 20px;
+	line-height: 0;
+	color: #fff;
+}
+.siteHeaderButton {
+	cursor: pointer;
+	color: #d9e9ef;
+}
+
+.formFooter {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+
+	border-top: 1px solid #d7dbdd;
+	padding: 10px;
+	&-section {
+		display: flex;
+		align-items: center;
+	}
+	&-item + &-item {
+		margin-left: 5px;
+	}
+	.formFooterFeedback {
+		color: #86969c;
+		font-size: 12px;
+		line-height: 0;
+	}
+	.button-clear {
+	  color: #16A2D7;
+	  background-color: #FFFFFF;
+	  border: 1px solid #FFFFFF;
+	}
+}
+
+.sideBar {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+
+	height: 300px;
+	width: 150px;
+	border-right: 1px solid #d7dbdd;
+	background-color: #fcfdfd;
+	padding: 10px;
+	&-item {
+		cursor: pointer;
+		padding: 5px 10px;
+		color: #16a2d7;
+		font-size: 12px;
+		&.active {
+			background-color: #eef3f5;
+			border-radius: 4px;
+		}
+	}
+}
+
+.centeredPrompt {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	max-height: 300px;
+	padding: 10px;
+	&-item + &-item {
+		margin-top: 5px;
+	}
+	&Icon {
+		font-size: 60px;
+		line-height: 0;
+	}
+	&Label {
+		color: #86969c;
+		font-size: 30px;
+		font-weight: 700;
+		text-align: center;
+	}
+	&Details {
+		color: #86969c;
+		font-size: 16px;
+		margin-bottom: 10px;
+		text-align: center;
+	}
+}
+
+.featureListItem {
+	display: flex;
+	align-items: center;
+	min-width: 400px;
+	padding: 10px;
+	& + & {
+		border-top: 1px solid #d7dbdd;
+	}
+	&-reverse {
+		flex-direction: row-reverse;
+	}
+	&-icon,
+	&-description {
+		padding: 5px 15px;
+	}
+	&-description {
+		color: #86969c;
+		font-size: 12px;
+	}
+}
+
+
+.card {
+	display: flex;
+	flex-direction: column;
+	border: 1px solid #cad0d2;
+	border-radius: 4px;
+	overflow: hidden;
+	&-description {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		padding: 15px;
+		img {
+			margin-bottom: 10px;
+		}
+	}
+	&-descriptionText {
+		color: #57727c;
+		font-size: 12px;
+		text-align: center;
+	}
+	&-price {
+		text-align: center;
+		color: #57727c;
+		font-size: 12px;
+		font-weight: 700;
+		padding: 5px 10px;
+		border-top: 1px solid #d7dbdd;
+		background-color: #eef3f5;
+	}
+	&-fixedWidth {
+		max-width: 120px;
+	}
+}
+
+
+.cardGroup {
+	margin: 50px;
+	display: flex;
+	border: 1px solid #cad0d2;
+	border-radius: 4px;
+	overflow: hidden;
+	width: 500px;
+	&-card {
+		flex: 1 1 0;
+		border: none;
+		border-radius: 0;
+	}
+	&-card + &-card {
+		border-left: 1px solid #d7dbdd;
+	}
+	&-cardDescription {
+		flex: auto;
+	}
+}
